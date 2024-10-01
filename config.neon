@@ -1,3 +1,5 @@
+# this file would definitely be ignored by git in production, since it would contain credentials to numerous services
+
 product_database: mysql
 
 product_cache:
