@@ -1,0 +1,9 @@
+product_database: mysql
+
+product_cache:
+    caching_mechanism: file
+    file_cache_location: temp/products/cache.txt
+
+product_query_count:
+    storage_mechanism: file
+    file_storage_location: temp/products_query_count.txt
