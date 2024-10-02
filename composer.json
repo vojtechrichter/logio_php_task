@@ -13,7 +13,9 @@
     ],
     "require": {
         "php": "^8.3",
-        "nette/neon": "^3.4"
+        "nette/neon": "^3.4",
+        "psr/cache": "^3.0",
+        "phpfastcache/phpfastcache": "^9.2"
     },
     "require-dev": {
         "phpstan/phpstan": "^1.12"

@@ -1,11 +1,15 @@
 # this file would definitely be ignored by git in production, since it would contain credentials to numerous services
 
+# mysql or elastic
 product_database: mysql
 
 product_cache:
+    # file or memcached
     caching_mechanism: file
+    # if file, then specify its location
     file_cache_location: temp/products/cache.txt
 
 product_query_count:
-    storage_mechanism: file
+    # file or memcached
+    storage_type: file
     file_storage_location: temp/products_query_count.txt

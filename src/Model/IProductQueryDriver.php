@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Vojtechrichter\LogioPhpTask\Model;
 
-interface IProductQuery
+interface IProductQueryDriver
 {
     public function findProductById(int $id): array;
 }
