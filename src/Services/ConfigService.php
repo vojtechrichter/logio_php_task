@@ -14,9 +14,7 @@ final class ConfigService
     public const string PRODUCT_CACHE = 'product_cache';
     public const string CACHING_MECHANISM = 'caching_mechanism';
     public const string FILE_CACHE_LOCATION = 'file_cache_location';
-    public const string PRODUCT_QUERY_COUNT = 'product_query_count';
-    public const string STORAGE_TYPE = 'storage_type';
-    public const string FILE_STORAGE_LOCATION = 'file_storage_location';
+    public const string PRODUCT_QUERY_COUNT_FILE = 'product_query_count_file';
 
     public function __construct(
         private string $config_file_path
@@ -51,10 +49,5 @@ final class ConfigService
         }
 
         return false;
-    }
-
-    public function getDatabaseType(): string
-    {
-
     }
 }

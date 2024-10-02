@@ -27,6 +27,7 @@ final class FileCacheItemPool extends BaseCacheItemPool
      * @throws PhpfastcacheInvalidConfigurationException
      * @throws CacheException
      */
+    #[\Override]
     public function __construct(
         string $cache_dir_path = __DIR__ . '/../../../tmp/product_cache'
     )
@@ -42,46 +43,55 @@ final class FileCacheItemPool extends BaseCacheItemPool
         }
     }
 
+    #[\Override]
     public function getItem(string $key): CacheItemInterface
     {
         return $this->cache_instance->getItem($key);
     }
 
+    #[\Override]
     public function getItems(array $keys = []): iterable
     {
         return $this->cache_instance->getItems($keys);
     }
 
+    #[\Override]
     public function hasItem(string $key): bool
     {
         return $this->cache_instance->hasItem($key);
     }
 
+    #[\Override]
     public function clear(): bool
     {
-        $this->cache_instance->clear();
+        return $this->cache_instance->clear();
     }
 
+    #[\Override]
     public function deleteItem(string $key): bool
     {
-        $this->cache_instance->deleteItem($key);
+        return $this->cache_instance->deleteItem($key);
     }
 
+    #[\Override]
     public function deleteItems(array $keys): bool
     {
         return $this->cache_instance->deleteItems($keys);
     }
 
+    #[\Override]
     public function save(CacheItemInterface $item): bool
     {
         return $this->cache_instance->save($item);
     }
 
+    #[\Override]
     public function saveDeferred(CacheItemInterface $item): bool
     {
         return $this->cache_instance->saveDeferred($item);
     }
 
+    #[\Override]
     public function commit(): bool
     {
         return $this->cache_instance->commit();

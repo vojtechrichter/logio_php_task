@@ -8,10 +8,15 @@ use Psr\Cache\CacheItemInterface;
 
 class BaseCacheItem implements CacheItemInterface
 {
-    private string $key;
-    private mixed $value;
-    private ?\DateTimeInterface $expires_at;
-    private \DateTimeInterface|int|null $expires_after;
+    public function __construct(
+        private readonly string             $key,
+        private mixed                       $value,
+        private readonly bool               $is_hit,
+        private ?\DateTimeInterface         $expires_at = null,
+        private \DateTimeInterface|int|null $expires_after = null
+    )
+    {
+    }
 
     public function getKey(): string
     {
@@ -25,7 +30,7 @@ class BaseCacheItem implements CacheItemInterface
 
     public function isHit(): bool
     {
-        // TODO: Implement isHit() method.
+        return $this->is_hit;
     }
 
     public function set(mixed $value): static
