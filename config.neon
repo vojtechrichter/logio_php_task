@@ -8,5 +8,3 @@ product_cache:
     caching_mechanism: file
     # if file, then specify its location
     file_cache_location: temp/products/cache.txt
-
-product_query_count_file: temp/product_query_count.txt

@@ -14,7 +14,6 @@ final class ConfigService
     public const string PRODUCT_CACHE = 'product_cache';
     public const string CACHING_MECHANISM = 'caching_mechanism';
     public const string FILE_CACHE_LOCATION = 'file_cache_location';
-    public const string PRODUCT_QUERY_COUNT_FILE = 'product_query_count_file';
 
     public function __construct(
         private string $config_file_path
